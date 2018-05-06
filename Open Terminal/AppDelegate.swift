@@ -70,7 +70,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     fileprivate func helpMe() {
         let info = NSLocalizedString("information", comment: "Information presented on startup")
-        helpMe(info + "\n\n(c) Quentin PÂRIS 2016 - http://quentin.paris")
+        helpMe(info + "\n\n(c) Quentin PÂRIS 2018 - http://quentin.paris")
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
