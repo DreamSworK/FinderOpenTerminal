@@ -24,9 +24,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         exit(0)
     }
     
-    func handleGetURLEvent(_ event: NSAppleEventDescriptor?, replyEvent: NSAppleEventDescriptor?) {
+    @objc func handleGetURLEvent(_ event: NSAppleEventDescriptor?, replyEvent: NSAppleEventDescriptor?) {
         if let url = URL(string: event!.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))!.stringValue!) {
-            if url.path.characters.count > 0 {
+            if !url.path.isEmpty {
                 if(FileManager.default.fileExists(atPath: url.path)) {
                     
                     let arg =   "tell application \"System Events\"\n" +

@@ -11,7 +11,7 @@ import FinderSync
 
 class FinderSync: FIFinderSync {
     
-    var myFolderURL: URL = URL(fileURLWithPath: "/")
+    @objc var myFolderURL: URL = URL(fileURLWithPath: "/")
     
     override init() {
         super.init()
@@ -39,7 +39,7 @@ class FinderSync: FIFinderSync {
             return
         }
         
-        NSWorkspace.shared().open(url)
+        NSWorkspace.shared.open(url)
     }
     
 }
